@@ -1,104 +1,83 @@
-body { 
+
+body {
   font-family: 'Roboto', sans-serif;
-  background-color: #f7f0f0;
-  color: #333;
   margin: 0;
   padding: 0;
+  background-color: #f5f5f5;
 }
 
 header {
-  background-color: #064c06;
-  color: rgb(255, 255, 255);
-  padding: 2rem;
+  background-color: #043c04;
+  color: white;
+  padding: 1rem;
   text-align: center;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2.5rem;
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
 }
 
+
 nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 200px;
-  height: 100vh;
-  background-color: #043c04;
-  padding-top: 2rem;
+  flex: 1 1 200px;
+  background-color: #064c06;
+  padding: 1rem;
 }
 
 nav ul {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
   margin: 0;
 }
 
-nav ul li {
-  margin: 10px 0;
+nav li {
+  margin-bottom: 10px;
 }
 
-nav ul li a {
+nav a {
   display: block;
+  padding: 10px;
+  background-color: #076607;
   color: white;
   text-decoration: none;
-  font-size: 1.2rem;
-  padding: 10px;
-  text-align: left;
+  border-radius: 5px;
+  text-align: center;
 }
 
-nav ul li a:hover {
-  background-color: #065406;
+nav a:hover {
+  background-color: #064f06;
 }
+
 
 main {
-  max-width: 900px;
-  margin: 2rem auto;
+  flex: 3 1 600px;
   padding: 2rem;
   background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  margin-left: 220px; 
+  border-radius: 0 0 12px 12px;
 }
 
-h1 {
-  color: #fffdfd;
-  font-size: 2rem;
+section {
   margin-bottom: 2rem;
 }
 
-h2 {
-  color: #2c3e50;
-  margin-top: 2rem;
-}
 
-h3 {
-  color: #34495e;
-  margin-top: 1rem;
-}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
 
-ul {
-  list-style-type: disc;
-  margin-left: 2rem;
-}
+  nav {
+    order: -1;
+  }
 
-ul li {
-  margin-bottom: 0.5rem;
-}
+  nav a {
+    font-size: 1.1rem;
+  }
 
-p {
-  font-size: 1rem;
-}
-
-strong {
-  font-weight: bold;
-}
-
-a {
-  color: #1e90ff;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+  main {
+    padding: 1rem;
+  }
 }
